@@ -68,7 +68,8 @@ done
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},/var/lib/A3Com,%{_sysconfdir}}
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install tools/*		$RPM_BUILD_ROOT%{_bindir}
 
