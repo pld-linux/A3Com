@@ -33,20 +33,32 @@ to:
 %setup -q
 
 %build
+# Change path for perl:
 for i in tools/*; do
-cat $i | sed -e "s/\%{_prefix}\/local\/bin/\%{_prefix}\/bin/" > tmp
+	cat $i | sed -e "s/\/usr\/local\/bin/\%{_prefix}\/bin/" > tmp
 	mv tmp $i
 done
+# Change location of config:
+for i in A3Com/*; do
+	cat $i | sed -e "s/\/usr\/local\/etc/\/etc/" > tmp
+	mv tmp $i
+done
+
+# Make modules:
 perl Makefile.PL
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},/var/lib/A3Com,%{_sysconfdir}}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 install tools/*		$RPM_BUILD_ROOT%{_bindir}
+
+cat << EOF >$RPM_BUILD_ROOT%{_sysconfdir}/a3com.conf
+GLOBALCACHEDIR = /var/lib/A3Com
+EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,5 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGELOG TODO README test.pl
+%attr(777,root,root) %dir /var/lib/A3Com
+%attr(644,root,root) %{_sysconfdir}/a3com.conf
 %attr(755,root,root) %{_bindir}/*
 %{perl_sitelib}/A3Com/*.pm
