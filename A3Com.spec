@@ -17,16 +17,16 @@ SuperStack II 3900/9300 and CoreBuilder 3500 LAN switches. Currently
 there are modules which can use either the SNMP or telnet interface
 to:
 
-    - -dump the ARP tables
-    - -dump bridge tables
-    - -search switches for a MAC address, IP address, or hostname
-    - -change admin passwords in batch mode
-    - -save and restore switch configurations via SNMP
-    - -upload new firmware via SNMP (batch mode)
-    - -and collect per-port ethernet details like current autonegotiation
-      mode and duplex settings
-    - -keep global caches of ARP and bridge tables for fast searches
-    - -keep global ARP history as a merged ARP database
+- dump the ARP tables
+- dump bridge tables
+- search switches for a MAC address, IP address, or hostname
+- change admin passwords in batch mode
+- save and restore switch configurations via SNMP
+- upload new firmware via SNMP (batch mode)
+- and collect per-port ethernet details like current autonegotiation
+  mode and duplex settings
+- keep global caches of ARP and bridge tables for fast searches
+- keep global ARP history as a merged ARP database
 
 %description -l pl
 A3Com to zestaw modu³ów Perla pozwalaj±cych na konfigurowanie switchy
