@@ -3,7 +3,7 @@ Summary:	A3Com - manipulation of 3Com SuperStack II
 Summary(pl):	A3Com - manipulacje 3Com SuperStack II
 Name:		A3Com
 Version:	0.2.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.kernel.org/pub/software/admin/A3Com/%{name}-%{version}.tar.bz2
@@ -59,7 +59,8 @@ for i in A3Com/*; do
 done
 
 # Make modules:
-perl Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
@@ -83,4 +84,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(777,root,root) %dir /var/lib/A3Com
 %attr(644,root,root) %{_sysconfdir}/a3com.conf
 %attr(755,root,root) %{_bindir}/*
-%{perl_sitelib}/A3Com/*.pm
+%{perl_vendorlib}/A3Com/*.pm
