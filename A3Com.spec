@@ -7,6 +7,7 @@ Release:	2
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.kernel.org/pub/software/admin/A3Com/%{name}-%{version}.tar.bz2
+# Source0-md5:	16133ebf73fe3883b0d46ed88f03377a
 URL:		http://www.kernel.org/software/A3Com/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
