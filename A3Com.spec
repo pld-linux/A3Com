@@ -25,9 +25,23 @@ to:
     - -and collect per-port ethernet details like current autonegotiation
       mode and duplex settings
     - -keep global caches of ARP and bridge tables for fast searches
-    - -keep global ARP history as a merged ARP database from
+    - -keep global ARP history as a merged ARP database
 
 %description -l pl
+A3Com to zestaw modu³ów Perla pozwalaj±cych na konfigurowanie switchy
+LAN firmy 3Com: SuperStack II 3900/9300 i CoreBuilder 3500. Aktualnie
+modu³y te mog± u¿ywaæ interfejsu SNMP lub telnet do:
+- wypisania tablic ARP
+- wypisania tablic bridgingu
+- wyszukiwania adresów MAC, IP lub nazw hostów
+- zmiany hase³ administratora w trybie wsadowym
+- zapisywania i odtwarzania konfiguracji switchy po SNMP
+- przesy³ania nowego firmware'u po SNMP (w trybie wsadowym)
+- zbierania dotycz±cych poszczególnych portów informacji takich jak
+  aktualny tryb autonegocjacji i duplex
+- przechowywania globalnego cache tablic ARP i bridgingu w celu
+  szybkiego przeszukiwania
+- przechowywania globalnej historii ARP jako po³±czonej bazy danych.
 
 %prep
 %setup -q
