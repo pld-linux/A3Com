@@ -84,6 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG TODO README test.pl
 %attr(777,root,root) %dir /var/lib/A3Com
-%attr(644,root,root) %{_sysconfdir}/a3com.conf
+%attr(644,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/a3com.conf
 %attr(755,root,root) %{_bindir}/*
+%dir %{perl_vendorlib}/A3Com
 %{perl_vendorlib}/A3Com/*.pm
