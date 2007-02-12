@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A3Com - manipulation of 3Com SuperStack II
-Summary(pl.UTF-8):   A3Com - manipulacje 3Com SuperStack II
+Summary(pl.UTF-8):	A3Com - manipulacje 3Com SuperStack II
 Name:		A3Com
 Version:	0.2.3
 Release:	2
