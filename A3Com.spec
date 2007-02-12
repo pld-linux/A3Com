@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A3Com - manipulation of 3Com SuperStack II
-Summary(pl):	A3Com - manipulacje 3Com SuperStack II
+Summary(pl.UTF-8):   A3Com - manipulacje 3Com SuperStack II
 Name:		A3Com
 Version:	0.2.3
 Release:	2
@@ -28,21 +28,21 @@ to:
 - keep global caches of ARP and bridge tables for fast searches
 - keep global ARP history as a merged ARP database
 
-%description -l pl
-A3Com to zestaw modu³ów Perla pozwalaj±cych na konfigurowanie switchy
+%description -l pl.UTF-8
+A3Com to zestaw moduÅ‚Ã³w Perla pozwalajÄ…cych na konfigurowanie switchy
 LAN firmy 3Com: SuperStack II 3900/9300 i CoreBuilder 3500. Aktualnie
-modu³y te mog± u¿ywaæ interfejsu SNMP lub telnet do:
+moduÅ‚y te mogÄ… uÅ¼ywaÄ‡ interfejsu SNMP lub telnet do:
 - wypisania tablic ARP
 - wypisania tablic bridgingu
-- wyszukiwania adresów MAC, IP lub nazw hostów
-- zmiany hase³ administratora w trybie wsadowym
+- wyszukiwania adresÃ³w MAC, IP lub nazw hostÃ³w
+- zmiany haseÅ‚ administratora w trybie wsadowym
 - zapisywania i odtwarzania konfiguracji switchy po SNMP
-- przesy³ania nowego firmware'u po SNMP (w trybie wsadowym)
-- zbierania dotycz±cych poszczególnych portów informacji takich jak
+- przesyÅ‚ania nowego firmware'u po SNMP (w trybie wsadowym)
+- zbierania dotyczÄ…cych poszczegÃ³lnych portÃ³w informacji takich jak
   aktualny tryb autonegocjacji i duplex
 - przechowywania globalnego cache tablic ARP i bridgingu w celu
   szybkiego przeszukiwania
-- przechowywania globalnej historii ARP jako po³±czonej bazy danych.
+- przechowywania globalnej historii ARP jako poÅ‚Ä…czonej bazy danych.
 
 %prep
 %setup -q
